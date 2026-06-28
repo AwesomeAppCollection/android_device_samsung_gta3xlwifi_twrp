@@ -43,7 +43,7 @@ BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --header_version 1 --board SRPSA25A003RU
-TARGET_PREBUILT_KERNEL := device/samsung/gta3xlwifi/prebuilt/kernel
+TARGET_PREBUILT_KERNEL := $(DEVICE_FOLDER)/prebuilt/kernel
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_FOLDER)/prebuilt/recovery_dtbo
 #BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_FOLDER)/bootimg.mk
@@ -77,11 +77,11 @@ TARGET_SCREEN_HEIGHT := 2408
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 80
-TW_EXTRA_LANGUAGES := true
+TW_EXTRA_LANGUAGES := false
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_NO_REBOOT_BOOTLOADER := true
-TW_INCLUDE_NTFS_3G := false
+TW_INCLUDE_NTFS_3G := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_MTP_DEVICE := "Galaxy A14"
 TW_USE_TOOLBOX := false
@@ -100,7 +100,7 @@ TW_NO_LEGACY_PROPS := true
 TW_NO_BIND_SYSTEM := true
 TW_NO_SCREEN_BLANK := true
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
-TW_INCLUDE_FASTBOOTD := false
+TW_INCLUDE_FASTBOOTD := true
 
 # Make recovery image smaller
 BOARD_HAS_NO_REAL_SDCARD := true
